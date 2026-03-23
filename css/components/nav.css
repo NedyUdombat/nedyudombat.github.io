@@ -1,0 +1,157 @@
+/*
+ * Navigation component
+ */
+
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	padding: 1.2rem var(--space-xl);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	backdrop-filter: blur(16px);
+	background: rgba(10, 10, 15, 0.85);
+	border-bottom: 1px solid var(--border-color);
+}
+
+.nav-logo {
+	font-family: var(--font-display);
+	font-weight: 800;
+	font-size: 1.1rem;
+	color: var(--text-primary);
+	letter-spacing: -0.02em;
+	z-index: 101;
+}
+
+.nav-logo .dot {
+	color: var(--accent);
+}
+
+/* Mobile toggle button */
+.nav-toggle {
+	display: none;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0.5rem;
+	z-index: 101;
+}
+
+.nav-toggle-icon {
+	display: block;
+	width: 20px;
+	height: 2px;
+	background: var(--text-primary);
+	position: relative;
+	transition: background var(--transition-fast);
+}
+
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 2px;
+	background: var(--text-primary);
+	left: 0;
+	transition: transform var(--transition-fast);
+}
+
+.nav-toggle-icon::before {
+	top: -6px;
+}
+
+.nav-toggle-icon::after {
+	top: 6px;
+}
+
+/* Toggle active state (X shape) */
+.nav-toggle[aria-expanded="true"] .nav-toggle-icon {
+	background: transparent;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-icon::before {
+	transform: rotate(45deg);
+	top: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-icon::after {
+	transform: rotate(-45deg);
+	top: 0;
+}
+
+.nav-links {
+	display: flex;
+	gap: var(--space-xl);
+}
+
+.nav-links a {
+	font-family: var(--font-mono);
+	font-size: 0.75rem;
+	color: var(--text-muted);
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	transition: color var(--transition-fast);
+}
+
+.nav-links a:hover {
+	color: var(--accent);
+}
+
+/* Mobile navigation */
+@media (max-width: 640px) {
+	.nav-toggle {
+		display: block;
+	}
+
+	.nav-links {
+		position: fixed;
+		top: 60px;
+		left: var(--space-md);
+		right: var(--space-md);
+		z-index: 100;
+		background-color: var(--bg-secondary);
+		border: 1px solid var(--border-color);
+		border-radius: var(--radius-lg);
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: stretch;
+		gap: 0;
+		padding: var(--space-sm) 0;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-10px);
+		transition: opacity var(--transition-medium), transform var(--transition-medium), visibility var(--transition-medium);
+	}
+
+	.nav-links.active {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
+
+	.nav-links li {
+		width: 100%;
+	}
+
+	.nav-links a {
+		display: block;
+		font-family: var(--font-display);
+		font-size: 1rem;
+		font-weight: 500;
+		letter-spacing: 0.01em;
+		text-transform: none;
+		color: var(--text-primary);
+		padding: var(--space-md) var(--space-lg);
+		transition: color var(--transition-fast), background-color var(--transition-fast);
+	}
+
+	.nav-links a:hover {
+		color: var(--accent);
+		background-color: rgba(124, 255, 212, 0.08);
+	}
+}

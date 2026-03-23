@@ -1,0 +1,79 @@
+/*
+ * Hero section
+ * Note: fadeUp keyframes defined in animations.css
+ */
+
+.hero {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	padding: var(--space-4xl) 0;
+}
+.hero-greeting {
+	font-family: var(--font-mono);
+	font-size: 0.7rem;
+	color: var(--accent);
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	margin-bottom: var(--space-lg);
+	opacity: 0;
+	animation: fadeUp 0.5s ease 0.1s forwards;
+}
+.hero h1 {
+	font-family: var(--font-display);
+	font-weight: 700;
+	font-size: clamp(2.2rem, 4vw, 3rem);
+	line-height: 1.15;
+	letter-spacing: -0.03em;
+	color: var(--text-primary);
+	margin-bottom: var(--space-lg);
+	opacity: 0;
+	animation: fadeUp 0.5s ease 0.25s forwards;
+}
+.hero-body {
+	font-size: 1rem;
+	color: var(--text-muted);
+	max-width: 520px;
+	line-height: 1.85;
+	margin-bottom: 2.25rem;
+	opacity: 0;
+	animation: fadeUp 0.5s ease 0.4s forwards;
+}
+.hero-body a {
+	color: var(--text-primary);
+	text-decoration: none;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+	transition: border-color 0.2s;
+}
+.hero-body a:hover {
+	border-color: var(--accent);
+	color: var(--accent);
+}
+.hero-links {
+	display: flex;
+	gap: 1.5rem;
+	flex-wrap: wrap;
+	align-items: center;
+	opacity: 0;
+	animation: fadeUp 0.5s ease 0.55s forwards;
+}
+.hero-link {
+	font-size: 0.875rem;
+	color: var(--text-muted);
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	transition: color var(--transition-fast);
+}
+.hero-link svg {
+	flex-shrink: 0;
+	color: var(--accent);
+	transition: transform var(--transition-fast);
+}
+.hero-link:hover {
+	color: var(--text-primary);
+}
+.hero-link:hover svg {
+	transform: translateY(-2px);
+}

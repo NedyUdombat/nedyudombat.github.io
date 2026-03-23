@@ -1,0 +1,71 @@
+/*
+ * Contact section
+ */
+
+.contact-section {
+  text-align: center;
+  padding: var(--space-4xl) 0;
+}
+
+.contact-section .section-tag {
+  justify-content: center;
+}
+
+.contact-section .section-tag::before {
+  display: none;
+}
+
+.contact-intro {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  max-width: 420px;
+  margin: 0 auto var(--space-lg);
+}
+
+.contact-email {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+  display: block;
+  margin: var(--space-md) 0 var(--space-xl);
+  transition: opacity var(--transition-fast);
+}
+
+.contact-email:hover {
+  opacity: 0.7;
+}
+
+/* Social links */
+.social-links {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.6rem var(--space-md);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.social-link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.social-link svg {
+  width: 14px;
+  height: 14px;
+}

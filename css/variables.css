@@ -1,0 +1,50 @@
+/*
+ * Design tokens and CSS variables
+ * These define the visual language of the site
+ */
+
+:root {
+  /* Background colors */
+  --bg: #0a0a0f;
+  --bg-secondary: #111118;
+  --bg-tertiary: #18181f;
+  --card-bg: #13131a;
+
+  /* Border */
+  --border-color: rgba(255, 255, 255, 0.07);
+
+  /* Accent colors */
+  --accent: #7cffd4;
+  --accent-hover: #5ce8ba;
+  --accent-secondary: #a78bfa;
+
+  /* Text colors */
+  --text-primary: #e8e8f0;
+  --text-muted: #6b6b80;
+  --text-highlight: #9898b0;
+
+  /* Spacing (using a consistent scale) */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+
+  /* Typography */
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+
+  /* Border radius */
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.25s ease;
+  --transition-slow: 0.6s ease;
+}

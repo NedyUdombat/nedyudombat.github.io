@@ -1,0 +1,21 @@
+/*
+ * Main stylesheet
+ * Imports all CSS modules in the correct order
+ */
+
+/* Foundation */
+@import 'variables.css';
+@import 'base.css';
+@import 'animations.css';
+
+/* Components */
+@import 'components/nav.css';
+@import 'components/buttons.css';
+@import 'components/sections.css';
+@import 'components/hero.css';
+@import 'components/experience.css';
+@import 'components/tags.css';
+@import 'components/projects.css';
+@import 'components/skills.css';
+@import 'components/contact.css';
+@import 'components/footer.css';
