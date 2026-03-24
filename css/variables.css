@@ -16,6 +16,7 @@
   /* Accent colors */
   --accent: #7cffd4;
   --accent-hover: #5ce8ba;
+  --accent-muted: rgba(124, 255, 212, 0.70);
   --accent-secondary: #a78bfa;
 
   /* Text colors */
