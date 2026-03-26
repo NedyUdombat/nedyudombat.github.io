@@ -82,6 +82,17 @@
   top: 0.25em;
 }
 
+.experience-highlight .inline-link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color var(--transition-fast);
+}
+
+.experience-highlight .inline-link:hover {
+  color: var(--accent-hover);
+}
+
 @media (max-width: 640px) {
   .experience-header {
     flex-direction: column;
